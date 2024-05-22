@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Pricing Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a href="#">
+                    <img src="/images/logo.png" alt="Err." height="60px">
+                </a>
+            </div>
+            <div class="details">
+                <div class="lists">
+                    <ul>
+                        <li>Resources</li>
+                        <li>Tools</li>
+                        <li>Pricing</li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <button>Sign In</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="pricing">
+            <div class="plans">
+                <p>Plans</p>
+                <p id="matter">No hidden fees. Cancel Anytime </p>
+            </div>
+            <div class="duration">
+                <div class="details1">
+                    <span>Monthly</span>
+                    <span>Yearly</span>
+                    <select id="currency">
+                        <option value="USD">$ USD</option>
+                        <option value="INR">₹ INR</option>
+                        <option value="EUR">€ EUR</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="price-details">
+                <div class="price-mc" data-price="23.2">
+                    <img src="/images/motioncut.png" alt="">
+                    <h2 class="price">$23.2<span id="matter2">/month</span></h2>
+                    <button>Get Started</button>
+                    <p>Secured by PayPal</p>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Upload 10 videos monthly</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Up to 45 minutes long videos</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Generate 100 clips</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">HD download</span></div>
+                </div>
+                <div class="price-mc" data-price="63.2">
+                    <img src="/images/motioncutpro.png" alt="">
+                    <h2 class="price">$63.2<span id="matter2">/month</span></h2>
+                    <button>Get Started</button>
+                    <p>Secured by PayPal</p>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Upload 30 videos monthly</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Up to 2 hours long videos</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Generate 300 clips Monthly</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">4K download</span></div>
+                </div>
+                <div class="price-mc" data-price="151.2">
+                    <img src="/images/motioncutproplus.png" alt="">
+                    <h2 class="price">$151.2<span id="matter2">/month</span></h2>
+                    <button>Get Started</button>
+                    <p>Secured by PayPal</p>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Upload 100 videos monthly</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Up to 3 hours long videos</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">Generate 1000 clips monthly</span></div>
+                    <div id="details2"><i class="fa fa-check"></i><span id="matter3">4K download</span></div>
+                </div>
+            </div>
+            
+            <p id="talk">Need More? <a href="#contact-us"><span id="talk1">Let's Talk.</span></a> </p>
+            <div class="users">
+                <a href="https:/twitter.com"><img src="/images/user1.jpg" alt=""></a>
+                <a href="https:/twitter.com"><img src="/images/user2.jpg" alt=""></a>
+                <a href="https:/twitter.com"><img src="/images/user3.jpg" alt=""></a>
+                <a href="https:/twitter.com"><img src="/images/user4.jpg" alt=""></a>
+                <a href="https:/twitter.com"><img src="/images/user5.jpg" alt=""></a>
+            </div>
+            <p id="talk">Trusted by 350k+ happy users</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-div">
+            <div class="footer1">
+                <span>ZIGG SAS doing business as Motioncut</span>
+                <a href="">Terms of services</a>
+                <a href="">privacy policy</a>
+            </div>
+            <div class="footer1">
+                <span>Resources</span>
+                <a href="">Blog</a>
+                <a href="">Briefs</a>
+                <a href="">API Docs</a>
+                <a href="">Discord</a>
+            </div>
+            <div class="footer1">
+                <span>Services</span>
+                <a href="">Become a affliate</a>
+                <a href="">API</a>
+            </div>
+            <div class="footer1">
+                <span>Alternatives</span>
+                <a href="">2short AI</a>
+                <a href="">Dumme</a>
+                <a href="">Munch</a>
+                <a href="">Opus Clip</a>
+                <a href="">Qlip</a>
+            </div>
+        </div>
+        <p id="made-by"><span id="copyright">©2024</span> Made by <a href="https:/instagram.com/chaitanya_7979" target="_blank">chaitanya  </a></p>
+    </footer>
+    <script>
+        const conversionRates = {
+            USD: 1,
+            INR: 82.7,  // Example conversion rate from USD to INR
+            EUR: 0.85  // Example conversion rate from USD to EUR
+        };
+
+        const currencySymbols = {
+            USD: '$',
+            INR: '₹',
+            EUR: '€'
+        };
+
+        document.getElementById('currency').addEventListener('change', function () {
+            const selectedCurrency = this.value;
+            const priceElements = document.querySelectorAll('.price-mc');
+
+            priceElements.forEach(element => {
+                const basePrice = parseFloat(element.getAttribute('data-price'));
+                const convertedPrice = basePrice * conversionRates[selectedCurrency];
+                const priceDisplay = element.querySelector('.price');
+                priceDisplay.innerHTML = `${currencySymbols[selectedCurrency]}${convertedPrice.toFixed(2)}<span id="matter2">/month</span>`;
+            });
+        });
+    </script>
+</body>
+</html>
