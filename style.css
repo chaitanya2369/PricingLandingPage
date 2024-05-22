@@ -202,9 +202,6 @@ footer{
 }
 
 
-
-/*.........*/
-
 @media (max-width: 1000px) {
     .pricing {
         margin: 0% 5%;
@@ -231,12 +228,52 @@ footer{
     }
 }
 
-@media (max-width:540px) {
-    .header .details .login button {
-        font-size: 15px;
-        padding: 3px;
+
+@media (max-width: 540px) {
+    .pricing .duration {
+        flex-direction: column;
+        align-items: center;
     }
-    .header .details {
-        font-size: 15px;
+    .pricing .duration .details1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+    .pricing .duration .details1 span,
+    #currency {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .header .details .lists {
+        display: none;
+    }
+    
+    .price-details .price-mc {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .price-details .price-mc img {
+        height: 63px; /* Decrease by 10% */
+    }
+    .price-details .price-mc h2 {
+        font-size: 40.5px; /* Decrease by 10% */
+    }
+    .price-details .price-mc #matter2 {
+        font-size: 27px; /* Decrease by 10% */
+    }
+    .price-details .price-mc button {
+        font-size: 22.5px; /* Decrease by 10% */
+        padding: 9px 40.5px; /* Decrease by 10% */
+    }
+    .price-details .price-mc p {
+        font-size: 18px; /* Decrease by 10% */
+    }
+    .price-details .price-mc #matter3 {
+        font-size: 18px; /* Decrease by 10% */
+    }
+    .price-details .price-mc i {
+        font-size: 18px; /* Decrease by 10% */
+    }
+
 }
